@@ -4,14 +4,16 @@ import { FormsModule }          from '@angular/forms';
 import { RouterModule, Routes } from '@angular/router';
 
 import { AppComponent }          from './app.component';
-import { FirstComponentComponent } from './first-component/first-component.component';
 import { NotFoundComponent } from './not-found/not-found.component';
-import { SecondComponentComponent } from './second-component/second-component.component';
 import { WelcomeComponent } from './welcome/welcome.component';
+import { HomeComponent } from './home/home.component';
+import { ContactComponent } from './contact/contact.component';
+import { AboutComponent } from './about/about.component';
 
 const appRoutes: Routes = [
-  { path: 'first-page', component: FirstComponentComponent },
-  { path: 'second-page', component: SecondComponentComponent },
+  { path: 'home', component: HomeComponent },
+  { path: 'contact', component: ContactComponent },
+  { path: 'about', component: AboutComponent },
   { path: '', component: WelcomeComponent },
 
   { path: '**', component: NotFoundComponent }
@@ -29,9 +31,10 @@ const appRoutes: Routes = [
   declarations: [
     AppComponent,
     NotFoundComponent,
-    FirstComponentComponent,
-    SecondComponentComponent,
-    WelcomeComponent
+    WelcomeComponent,
+    HomeComponent,
+    ContactComponent,
+    AboutComponent
   ],
   bootstrap: [ AppComponent ]
 })
